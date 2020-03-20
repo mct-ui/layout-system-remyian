@@ -161,7 +161,48 @@ a:focus {
 
 /*------------------------------------*\
   #OBJECTS
+  
 \*------------------------------------*/
+.o-row {
+    padding: 24px 24px 0px;
+    display: flow-root;
+}
+
+.o-row--lg {
+    padding: 48px 48px 0px;
+    display: flow-root;
+}
+.o-row--primary {
+    background-color: #e85e00;
+    color: white;
+    padding: 24px 24px 0px;
+    display: flow-root;
+}
+
+.o-row--dark {
+    background-color: #111;
+    color: white;
+    padding: 24px 24px 0px;
+    display: flow-root;
+}
+
+@media (min-width: 768px) {
+    .o-row--lg {}
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    width: 90em;
+    margin-left: auto;
+    margin-right: auto;
+    /* gebruiken om te centreren */
+}
+
 
 /*
     Object: Object name
@@ -193,11 +234,115 @@ a:focus {
     max-width: 36em;
 }
 
+.u-max-width-md {
+    max-width: 45em;
+}
+
+.u-max-width-lg {
+    max-width: 60em;
+}
+
+.u-max-width-xl {
+    max-width: 75em ;
+}
+
+.u-max-width-none {
+    max-width: none;
+}
+
 /*
-    Utility: Utility name
+    Utility: Flex
     ---
-    Utility description
+    Utility classes to put specific flex properties onto elements
+    Will be mostly used on o-layout__item
 */
+
+.o-layout {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-layout__item {
+    flex-basis: 100%;
+}
+
+.o-layout__gutter > .o-layout__item{
+    padding: 0 12px;
+}
+
+.o-layout__gutter{
+    margin: 0 -12px;
+}
+
+.u-flex-basis-auto {
+    flex-basis: auto !important;
+}
+
+.u-flex-grow-1 {
+    flex-grow: 1 !important; 
+}
+.u-1-of-2 {
+    flex-basis: calc(100%/2) !important;
+}
+
+.u-1-of-3 {
+    flex-basis: calc(100%/3) !important;
+}
+
+.u-2-of-3 {
+    flex-basis: calc(100%/3*2) !important;
+}
+
+.u-1-of-4 {
+    flex-basis: calc(100%/4) !important;
+}
+
+.u-3-of-4 {
+    flex-basis: calc(100%/4*3) !important;
+}
+
+.u-1-of-5 {
+    flex-basis: calc(100%/5) !important;
+}
+
+.u-2-of-5 {
+    flex-basis: calc(100%/5*2) !important;
+}
+
+.u-3-of-5 {
+    flex-basis: calc(100%/5*3) !important;
+}
+
+.u-4-of-5 {
+    flex-basis: calc(100%/5*4) !important;
+}
+
+.u-1-of-6 {
+    flex-basis: calc(100%/6) !important;
+}
+
+.u-5-of-6 {
+    flex-basis: calc(100%/6*5) !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {}
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {}
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {}
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {}
+}
+
 
 /*------------------------------------*\
   #MEDIA

@@ -4,7 +4,9 @@
     Creates a horizontal row that stretches the viewport and adds padding around children
 */
 
-.o-row {}
+.o-row {
+    padding: 24px 24px 0px;
+}
 
 .o-row--primary {}
 
